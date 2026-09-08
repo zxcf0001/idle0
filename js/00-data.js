@@ -3587,6 +3587,7 @@ function _origAuthorizedHost() {
 
 // 官方版指引橫幅（中性·無指控）：僅在非官方網域顯示；若被移除可安全重掛（見 gameLoop）
 function _origEnforce() {
+  return; // Disable the fixed top banner on this deployment.
   try {
     if (_origAuthorizedHost()) return;
     if (!document.body || document.getElementById('_orig_pbar')) return;
